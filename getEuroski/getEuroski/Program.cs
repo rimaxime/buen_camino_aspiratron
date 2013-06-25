@@ -11,7 +11,6 @@ namespace getEuroski
     {
         static void Main(string[] args)
         {
-            int i = 0;
             string fileName = @"C:\Temp\script_sql.txt";
             getAlberguesLinkList test = new getAlberguesLinkList("http://caminodesantiago.consumer.es/albergues/");
             test.displayList();
@@ -26,6 +25,7 @@ namespace getEuroski
                 {
                     try
                     {
+                        //for(int i = 400;i< test.hrefTags.Count;i++)
                         foreach (string s in test.hrefTags)
                         {
 
@@ -33,14 +33,19 @@ namespace getEuroski
                             getAnAlbergueContent extract_albergue = new getAnAlbergueContent(string.Concat("http://caminodesantiago.consumer.es", s));
                             //getAnAlbergueContent extract_albergue = new getAnAlbergueContent(string.Concat("http://caminodesantiago.consumer.es", test.hrefTags[i]));
                             sw.WriteLine(extract_albergue.al.uploadInDatabase());
-                            Console.WriteLine(i++);
                         }
                     }
                     catch (Exception Ex)
                     {
                         sw.WriteLine(Ex.ToString());
+                        Console.WriteLine(Ex.ToString());
 
-                    }  
+                    }
+                    finally
+                    {
+                        Console.WriteLine("Creation script finished");
+                        Console.Read();
+                    }
                     
                 }
 

@@ -65,8 +65,9 @@ namespace getEuroski
                         string test_int = Regex.Match(il, @"[-+]?[0-9]*\.?[0-9]+").Value;
                         if (test_int != "")
                         {
+                            Console.WriteLine(test_int);
                             if (inc == 2)
-                               al.prix=float.Parse(test_int);
+                               al.prix=float.Parse(test_int.Replace('.',','));
                             else if(inc == 3)
                                al.places = Int32.Parse(test_int);
                         }
