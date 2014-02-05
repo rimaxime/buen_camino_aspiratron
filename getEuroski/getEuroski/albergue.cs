@@ -20,12 +20,14 @@ namespace getEuroski
         public bool internet { get; set; }
         public bool wifi { get; set; }
         public int type {get; set;}
+        public double latitude { get; set; }
+        public double longitude { get; set; }
 
 
         public override string ToString()
         {
             return string.Format("|nom : {0} | adresse : {1} | ville : {2} | prix : {3} | places : {4} | machine :{5} | seche linge : {6} |Chemin : {7}"+
-                "| Cuisine : {8} | internet : {9} | wifi : {10} | type : {11}"
+                "| Cuisine : {8} | internet : {9} | wifi : {10} | type : {11} | latitude : {12} | longitude : {13}"
                 , nom,
                 adresse,
                 ville, 
@@ -36,13 +38,13 @@ namespace getEuroski
                 chemin,
                 cuisine,
                 internet,
-                wifi, type);
+                wifi, type, latitude, longitude);
         }
 
-        public string uploadInDatabase()
+        public string ToSqlRequest()
         {
-            return string.Format("INSERT INTO Albergues (nom, ville,places,prix,type,cuisine,lave_linge,seche_linge,internet,wifi,chemin, adresse) VALUES (\"{0}\"," +
-                "\"{1}\", {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, \"{10}\", \"{11}\");",
+            return string.Format("INSERT INTO Albergues (nom, ville,places,prix,type,cuisine,lave_linge,seche_linge,internet,wifi,chemin, adresse, latitude, longitude) VALUES (\"{0}\"," +
+                "\"{1}\", {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, \"{10}\", \"{11}\", \"{12}\", \"{13}\");",
                 nom,
                 ville,
                 places,
@@ -54,9 +56,34 @@ namespace getEuroski
                 Convert.ToInt32(internet),
                 Convert.ToInt32(wifi),
                 chemin,
-                adresse);
+                adresse,
+                latitude, 
+                longitude);
 
         }
 
+        internal static string GetHeaderCsv()
+        {
+            return string.Format("nom; ville;places;prix;type;cuisine;lave_linge;seche_linge;internet;wifi;chemin; adresse; latitude; longitude");
+        }
+
+        internal string ToCsv()
+        {
+            return string.Format("{0}; {1}; {2}; {3}; {4}; {5}; {6} ; {7} ; {8} ; {9} ; {10} ; {11}; {12}; {13}",
+                    nom,
+                    ville,
+                    places,
+                    prix,
+                    type,
+                    Convert.ToInt32(cuisine),
+                    Convert.ToInt32(machine),
+                    Convert.ToInt32(seche_linge),
+                    Convert.ToInt32(internet),
+                    Convert.ToInt32(wifi),
+                    chemin,
+                    adresse,
+                    latitude,
+                    longitude);
+        }
     }
 }

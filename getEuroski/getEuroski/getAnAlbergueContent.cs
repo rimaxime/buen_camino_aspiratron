@@ -9,8 +9,16 @@ namespace getEuroski
 {
     class getAnAlbergueContent
     {
-        public albergue al;
+        private albergue al;
+
+        private string url;
+
         public getAnAlbergueContent(string url)
+        {
+            this.url = url;
+        }
+
+        public albergue ExtractAlbergueContent()
         {
             HtmlWeb hw = new HtmlWeb();
             //Console.WriteLine(url);
@@ -34,7 +42,6 @@ namespace getEuroski
                 }
                 else
                     al.type = 1;
-                //Console.WriteLine(name);
 
                 //ville & adresse
                 foreach (HtmlNode n in doc.DocumentNode.SelectNodes("//*[@id=\"bloque-ficha-albergue\"]").Elements("ul"))
@@ -131,7 +138,6 @@ namespace getEuroski
 
                     }
                 }
-                Console.WriteLine(al.ToString());
                 //Console.Read();
                 //get the content wished.
                 // Nom : class titulo-principal
@@ -144,6 +150,7 @@ namespace getEuroski
             }
             else
                 Console.WriteLine("Open problem");
+            return al;
         }
 
     }

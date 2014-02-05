@@ -9,3 +9,17 @@ C:\Users\Asus\Programming\buen_camino_aspiratron\getEuroski\getEuroski\obj\Debug
 C:\Users\Asus\Programming\buen_camino_aspiratron\getEuroski\getEuroski\obj\Debug\getEuroski.pdb
 C:\Users\Asus\Programming\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\MySql.Data.dll
 C:\Users\Asus\Programming\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\MySql.Web.dll
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\getEuroski.exe.config
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\obj\Debug\getEuroski.exe
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\obj\Debug\getEuroski.pdb
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\getEuroski.exe
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\getEuroski.pdb
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\GoogleMapsApi.dll
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\MySql.Data.dll
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\MySql.Web.dll
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\GoogleMapsApi.pdb
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\GoogleMapsApi.xml
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Maxime\Documents\GitHub\buen_camino_aspiratron\getEuroski\getEuroski\obj\Debug\getEuroski.csprojResolveAssemblyReference.cache
